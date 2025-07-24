@@ -9,6 +9,7 @@
 body {
   background-color: #ffffff;
   color: #333;
+
 }
 
 /* Navbar */
@@ -21,10 +22,8 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #e76f51;
+.logo img {
+  height: 40px;
 }
 
 .nav-links {
@@ -61,7 +60,7 @@ body {
   color: #e76f51;
 }
 .highlight{
-   color: #e76f51;
+  color: #e76f51;
 }
 .banner-img {
   flex: 1;
@@ -89,6 +88,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .plant-card {
@@ -110,16 +110,10 @@ body {
   margin-top: 0.5rem;
 }
 
-.add-to-cart:active::after {
-  content: "Flower Added to Cart";
-  display: block;
-  color: green;
-  margin-top: 0.5rem;
-}
-.add-to-cart:HOVER{
+.add-to-cart:hover {
   background-color: rgb(71, 42, 165);
   transform: scale(1.05);
-  box-shadow: 0 5px 15px cornflowerblue
+  box-shadow: 0 5px 15px cornflowerblue;
 }
 
 /* Lover Section */
@@ -143,12 +137,15 @@ body {
 
 .trusted-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: gold;
+  top: -25px;
+  left: 530px;
+  
   padding: 0.5rem;
   border-radius: 5px;
   animation: spin 3s linear infinite;
+
+   width: 110px;
+  height: auto;
 }
 
 @keyframes spin {
@@ -158,38 +155,49 @@ body {
 
 .lover-text {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem;
 }
 
-/* Deals */
-h2, h3 {
-  text-align: center;
-}
-
-.highlight {
-  color: #e15b26;
-}
-
+/* Deals Section */
 .deals-section {
-  padding: 40px 20px;
+  padding: 2rem 1rem;
   background-color: #fff;
   text-align: center;
+}
+
+.deals-section h2 .highlight {
+  color: orange;
 }
 
 .deals-section p {
   max-width: 600px;
   margin: 10px auto 30px;
+  font-size: 0.95rem;
 }
 
-.deals-container {
+.row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+/* Left column (two small cards stacked vertically) */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right column (one large card) */
+.right-column .deal-card {
+  height: 320px;
+  width: 500px;
+}
+
+/* Deal Card Base */
 .deal-card {
-  width: 280px;
+  width: 250px;
   height: 150px;
   border-radius: 10px;
   color: white;
@@ -198,6 +206,7 @@ h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .deal-card.gray {
@@ -209,6 +218,12 @@ h2, h3 {
   background-position: center;
 }
 
+.deal-card span {
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
 .deal-card button {
   background-color: white;
   color: #333;
@@ -216,9 +231,11 @@ h2, h3 {
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
   align-self: flex-start;
 }
 
+/* Subscribe */
 .subscribe-section {
   background-color: #7f8c8d;
   padding: 50px 20px;
@@ -228,6 +245,9 @@ h2, h3 {
 
 .subscribe-form {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscribe-form input[type="email"] {
@@ -236,6 +256,7 @@ h2, h3 {
   max-width: 80%;
   border: none;
   border-radius: 4px;
+  margin: 5px;
 }
 
 .subscribe-form button {
@@ -244,9 +265,10 @@ h2, h3 {
   color: white;
   border: none;
   border-radius: 4px;
-  margin-left: 10px;
+  margin: 5px;
 }
 
+/* Footer */
 .footer {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -257,9 +279,9 @@ h2, h3 {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .footer-brand {
@@ -274,8 +296,7 @@ h2, h3 {
 .footer-links {
   display: flex;
   gap: 40px;
-  flex: 2 1 400px;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer-column {
@@ -298,6 +319,7 @@ h2, h3 {
   gap: 15px;
   align-items: flex-start;
   flex: 1 1 150px;
+  flex-wrap: wrap;
 }
 
 .footer-socials img {
@@ -305,40 +327,19 @@ h2, h3 {
   height: 24px;
 }
 
-/* Responsive for iPhone 14/15 */
-@media screen and (max-width: 430px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-socials {
-    margin-top: 20px;
-  }
-}
-
-
-/* Responsive */
-@media (max-width: 450px) {
+/* Responsive for screens ≤ 567px */
+@media screen and (max-width: 567px) {
   .nav-links {
     display: none;
   }
-
-  .navbar {
-    justify-content: space-between;
+ 
+  .banner {
+    flex-direction: column;
+    text-align: center;
   }
 
   .plant-grid {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .banner {
-    flex-direction: column;
   }
 
   .lover {
@@ -349,45 +350,68 @@ h2, h3 {
     display: none;
   }
 
-  .footer {
+  .row {
     flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-.footer-content {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
-  .footer-links {
+  .left-column,
+  .right-column {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
+    gap: 15px;
   }
 
-  .footer-socials {
-    margin-top: 20px;
+  .deal-card {
+    width: 90%;
+    height: auto;
+    min-height: 140px;
   }
 
-.deals-container {
-    flex-direction: column;
-    align-items: center;
+  .right-column .deal-card {
+    height: 200px;
+    width: 90%;
   }
+
+  .deal-card span {
+    font-size: 0.95rem;
+  }
+
+  .deal-card button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
 
   .subscribe-form {
     flex-direction: column;
   }
 
-  .subscribe-form input[type="email"],
+  .subscribe-form input,
   .subscribe-form button {
-    width: 50%;
-    margin: 5px 0;
+    width: 80%;
+    margin: 5px auto;
   }
 
-  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-  
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+@media screen and (max-width:1400px){
+  .trusted-badge{
+    display: none;
+  }
+}

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flower Market</title>
   <link rel="stylesheet" href="style/style.css" />
 </head>
-
 <body>
+
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo"><img src="assets/logo.png" alt=""></div>
+    <div class="logo"><img src="assets/logo.png" alt="Logo"></div>
     <nav class="nav">
       <ul class="nav-links">
         <li>Home</li>
@@ -39,6 +38,7 @@
     <h2>Our Plants</h2>
     <p>Indulge your senses with the beauty and fragrance of our fresh flower shop. From <br>classic roses to exotic blooms, we offer a wide variety of fresh.</p>
     <div class="plant-grid">
+      
       <div class="plant-card">
         <img src="assets/sample-flower-image.png" alt="Lily Flower">
         <h3>Lily Flower</h3>
@@ -87,15 +87,16 @@
         <p>$10</p>
         <button class="add-to-cart">Add to Cart</button>
       </div>
-      <!-- Repeat 7 more cards similarly -->
+      
     </div>
   </section>
 
-  <!-- Plant Lover Section -->
+  <!-- Flower Lover Section -->
   <section class="lover">
     <div class="lover-img">
       <img src="assets/flower-store.png" alt="Plant Lover">
-      <div class="trusted-badge">Trusted</div>
+      <div class="trusted-badge">
+      <img src="assets/trusted-badge.png" alt="trusted-badge"></div>
     </div>
     <div class="lover-text">
       <h2>Flower & Plants Lover</h2>
@@ -107,29 +108,32 @@
     </div>
   </section>
 
-  <!-- Latest Deal Section -->
-   <section class="deals-section">
-    <h2><span class="highlight">Latest</span> Deals</h2>
-    <p>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
-
-    <div class="deals-container">
-      <div class="deal-card gray">
+<!-- Deals Section -->
+<section class="deals-section">
+  <h2><span class="highlight">Latest</span> Deals</h2>
+  <p>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</p>
+  <div class="row">
+    <div class="left-column">
+      <div class="deal-card image" style="background-image: url('assets/deal-bloom.png');">
         <span>60% Off | Bloom Plant</span>
         <button>Shop Now</button>
       </div>
-
-      <div class="deal-card image" style="background-image: url('assets/deal-zabo.png');">
-        <span>25% Off | Zabo Plant</span>
-        <button>Shop Now</button>
-      </div>
-
       <div class="deal-card image" style="background-image: url('assets/deal-ana.png');">
         <span>30% Off | Ana Plant</span>
         <button>Shop Now</button>
       </div>
     </div>
-  </section>
+    <div class="right-column">
+      <div class="deal-card image" style="background-image: url('assets/deal-zabo.png');">
+        <span>25% Off | Zabo Plant</span>
+        <button>Shop Now</button>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+  <!-- Subscribe -->
   <section class="subscribe-section">
     <h3>Join the colorful Bunch</h3>
     <div class="subscribe-form">
@@ -137,39 +141,38 @@
       <button>Subscribe</button>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <img src="assets/logo.png" alt="Logo" class="logo" />
-      <p>Indulge your senses with the beauty and fragrance of our fresh flower shop.</p>
-    </div>
-
-    <div class="footer-links">
-      <div class="footer-column">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Blog</a>
-        <a href="#">FAQ</a>
-        <a href="#">Contact Us</a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+        <p>Indulge your senses with the beauty and fragrance of our fresh flower shop.</p>
       </div>
-      <div class="footer-column">
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Help Center</a>
+      <div class="footer-links">
+        <div class="footer-column">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><img src="assets/icon-linkedin.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="assets/icon-twitter.png" alt="X" /></a>
+        <a href="#"><img src="assets/icon-facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="assets/icon-youtube.png" alt="YouTube" /></a>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-socials">
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="X" /></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
-    </div>
-  </div>
-
-</footer>
 </body>
-
 </html>
