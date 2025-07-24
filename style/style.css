@@ -9,7 +9,7 @@
 body {
   background-color: #ffffff;
   color: #333;
-
+  line-height: 1.6;
 }
 
 /* Navbar */
@@ -59,9 +59,11 @@ body {
 .banner-text .highlight {
   color: #e76f51;
 }
-.highlight{
+
+.highlight {
   color: #e76f51;
 }
+
 .banner-img {
   flex: 1;
   text-align: center;
@@ -75,12 +77,17 @@ body {
 /* Plants Section */
 .plants {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .plants h2 {
   font-size: 2rem;
   color: #e76f51;
+}
+
+.plants p {
+  margin-top: 0.5rem;
+  color: #666;
 }
 
 .plant-grid {
@@ -133,18 +140,15 @@ body {
 
 .lover-img img {
   max-width: 100%;
+  height: auto;
 }
 
 .trusted-badge {
   position: absolute;
-  top: -25px;
-  left: 530px;
-  
-  padding: 0.5rem;
-  border-radius: 5px;
+  top: -20px;
+  right: 10%;
   animation: spin 3s linear infinite;
-
-   width: 110px;
+  width: 100px;
   height: auto;
 }
 
@@ -156,6 +160,11 @@ body {
 .lover-text {
   flex: 1;
   padding: 2rem;
+}
+
+.lover-text ul {
+  list-style: disc;
+  padding-left: 1rem;
 }
 
 /* Deals Section */
@@ -247,16 +256,16 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .subscribe-form input[type="email"] {
   padding: 10px;
-  width: 250px;
-  max-width: 80%;
+  width: 300px;
   border: none;
   border-radius: 4px;
-  margin: 5px;
 }
 
 .subscribe-form button {
@@ -265,38 +274,43 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  margin: 5px;
+  cursor: pointer;
 }
 
 /* Footer */
 .footer {
   background-color: #f9f9f9;
   padding: 40px 20px;
-  font-size: 14px;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .footer-brand {
   flex: 1 1 250px;
 }
 
+.footer-brand img {
+  max-width: 120px;
+}
+
 .footer-brand p {
   color: #555;
   margin-top: 10px;
+  line-height: 1.6;
 }
 
 .footer-links {
   display: flex;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 60px;
+  flex: 2 1 400px;
 }
 
 .footer-column {
@@ -319,6 +333,7 @@ body {
   gap: 15px;
   align-items: flex-start;
   flex: 1 1 150px;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -327,72 +342,28 @@ body {
   height: 24px;
 }
 
-/* Responsive for screens ≤ 567px */
-@media screen and (max-width: 567px) {
-  .nav-links {
+/* Responsive: ≤ 1400px */
+@media screen and (max-width: 1400px) {
+  .trusted-badge {
     display: none;
   }
- 
-  .banner {
-    flex-direction: column;
-    text-align: center;
-  }
+}
 
+/* Responsive: ≤ 991px */
+@media screen and (max-width: 991px) {
   .plant-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .lover {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .trusted-badge {
     display: none;
   }
-
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-column,
-  .right-column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .deal-card {
-    width: 90%;
-    height: auto;
-    min-height: 140px;
-  }
-
-  .right-column .deal-card {
-    height: 200px;
-    width: 90%;
-  }
-
-  .deal-card span {
-    font-size: 0.95rem;
-  }
-
-  .deal-card button {
-    padding: 6px 12px;
-    font-size: 0.85rem;
-  }
 }
 
-
-  .subscribe-form {
-    flex-direction: column;
-  }
-
-  .subscribe-form input,
-  .subscribe-form button {
-    width: 80%;
-    margin: 5px auto;
+/* Responsive: ≤ 767px */
+@media screen and (max-width: 767px) {
+  .plant-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .footer-content {
@@ -403,15 +374,28 @@ body {
 
   .footer-links {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
   }
 
   .footer-socials {
     justify-content: center;
   }
+}
 
-@media screen and (max-width:1400px){
-  .trusted-badge{
+/* Responsive: ≤ 567px */
+@media screen and (max-width: 567px) {
+  .nav-links {
     display: none;
   }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lover {
+    flex-direction: column;
+  }
+
 }
