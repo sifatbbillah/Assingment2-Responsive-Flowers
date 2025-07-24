@@ -343,7 +343,7 @@ body {
 }
 
 /* Responsive: ≤ 1400px */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .trusted-badge {
     display: none;
   }
@@ -385,10 +385,12 @@ body {
 
 /* Responsive: ≤ 567px */
 @media screen and (max-width: 567px) {
-  .nav-links {
+  .nav-links li {
     display: none;
   }
-
+.nav-links .cart {
+    display: inline-block;
+  }
   .banner {
     flex-direction: column;
     text-align: center;
